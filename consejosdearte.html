@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicas de Pintura Básicas · Estilo Retro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Special+Elite&display=swap');
+
+        :root {
+            --crema: #f8f1e3;
+            --mostaza: #e8b86d;
+            --coral: #e07a5f;
+            --verde-oliva: #81b29a;
+            --azul-petroleo: #3d5a80;
+            --marron: #5c4033;
+            --sombra: rgba(92, 64, 51, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Special Elite', cursive;
+            background-color: var(--crema);
+            color: var(--marron);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(232, 184, 109, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(129, 178, 154, 0.12) 0%, transparent 50%);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--azul-petroleo), #2c3e50);
+            color: var(--crema);
+            text-align: center;
+            padding: 3.5rem 1.5rem;
+            border-bottom: 8px solid var(--mostaza);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "✦ ✦ ✦";
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: 0;
+            letter-spacing: 1.5rem;
+            opacity: 0.3;
+            font-size: 0.9rem;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.4rem;
+            text-shadow: 2px 2px 0 var(--coral);
+        }
+
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        /* Introducción */
+        .intro {
+            background: white;
+            border: 3px solid var(--mostaza);
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 6px 6px 0 var(--sombra);
+            position: relative;
+        }
+
+        .intro::after {
+            content: "🎨";
+            position: absolute;
+            top: -18px;
+            right: 20px;
+            font-size: 2rem;
+            background: var(--crema);
+            padding: 0 8px;
+        }
+
+        /* Secciones de técnicas */
+        .tecnica {
+            background: white;
+            border: 3px solid var(--verde-oliva);
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 6px 6px 0 var(--sombra);
+            transition: transform 0.25s ease;
+        }
+
+        .tecnica:hover {
+            transform: translateY(-4px);
+            box-shadow: 8px 8px 0 var(--sombra);
+        }
+
+        .tecnica h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--azul-petroleo);
+            font-size: 1.7rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .tecnica h2 span {
+            background: var(--coral);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .tecnica p {
+            margin-bottom: 0.9rem;
+        }
+
+        .tecnica ul {
+            margin-left: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .tecnica li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* Consejo final */
+        .consejo {
+            background: linear-gradient(135deg, var(--mostaza), #f0c987);
+            border: 3px solid var(--coral);
+            border-radius: 12px;
+            padding: 1.8rem;
+            text-align: center;
+            margin-top: 2.5rem;
+            box-shadow: 6px 6px 0 var(--sombra);
+        }
+
+        .consejo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--marron);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--azul-petroleo);
+            color: var(--crema);
+            font-size: 0.95rem;
+            border-top: 6px solid var(--mostaza);
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--mostaza);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.1rem;
+            }
+            .tecnica h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Técnicas de Pintura Básicas</h1>
+        <p>Una guía sencilla y basica para empezar a pintar con confianza</p>
+    </header>
+
+    <div class="container">
+
+        <section class="intro">
+            <p>
+                Pintar no requiere talento, solo las ganas y el sentimiento de expresarte atrves de diferentes tecnicas C:
+            </p>
+        </section>
+
+        <!-- Técnica 1 -->
+        <article class="tecnica">
+            <h2><span>1</span> El Lavado (Wash)</h2>
+            <p>
+                Consiste en aplicar una capa muy diluida de pintura para cubrir grandes áreas 
+                de forma suave y uniforme. Es ideal para cielos, fondos y acuarelas.
+            </p>
+            <ul>
+                <li>Usa mucha agua y poca pintura.</li>
+                <li>Trabaja rápido antes de que seque.</li>
+                <li>Puedes superponer varios lavados para intensificar el color.</li>
+            </ul>
+        </article>
+
+        <!-- Técnica 2 -->
+        <article class="tecnica">
+            <h2><span>2</span> Pincel Seco</h2>
+            <p>
+                Se aplica pintura casi seca sobre el pincel. Crea texturas rugosas, 
+                hierba, cabello o efectos de envejecimiento.
+            </p>
+            <ul>
+                <li>Carga poco pigmento y limpia el exceso en un papel.</li>
+                <li>Pasa el pincel con suavidad sobre la superficie.</li>
+                <li>Perfecto para acrílico y óleo.</li>
+            </ul>
+        </article>
+
+        <!-- Técnica 3 -->
+        <article class="tecnica">
+            <h2><span>3</span> Impasto</h2>
+            <p>
+                Aplicar la pintura gruesa, casi como si fuera mantequilla. 
+                Genera relieve y mucha presencia visual.
+            </p>
+            <ul>
+                <li>Usa un pincel grueso o una espátula.</li>
+                <li>No diluyas la pintura.</li>
+                <li>Ideal para crear texturas expresivas y modernas.</li>
+            </ul>
+        </article>
+
+        <!-- Técnica 4 -->
+        <article class="tecnica">
+            <h2><span>4</span> Capas y Veladuras</h2>
+            <p>
+                Pintar por capas transparentes permite crear profundidad y colores 
+                más ricos. Es la base de la pintura tradicional.
+            </p>
+            <ul>
+                <li>Deja secar completamente cada capa.</li>
+                <li>Usa colores transparentes o diluidos.</li>
+                <li>Empieza por los tonos claros y termina con los oscuros.</li>
+            </ul>
+        </article>
+
+        <!-- Técnica 5 -->
+        <article class="tecnica">
+            <h2><span>5</span> Mezcla de Colores en el Lienzo</h2>
+            <p>
+                En lugar de mezclar todo en la paleta, combina los colores 
+                directamente sobre el soporte. Da un aspecto más vivo y espontáneo.
+            </p>
+            <ul>
+                <li>Coloca dos colores juntos y mezcla solo en el borde.</li>
+                <li>Úsalo para transiciones suaves (cielos, piel, paisajes).</li>
+                <li>Funciona especialmente bien con óleo y acrílico.</li>
+            </ul>
+        </article>
+
+        <!-- Técnica 6 -->
+        <article class="tecnica">
+            <h2><span>6</span> Esfumado (Blending)</h2>
+            <p>
+                Suavizar los bordes entre dos colores para que no se note 
+                el cambio brusco. Crea volumen y realismo.
+            </p>
+            <ul>
+                <li>Usa un pincel limpio y seco o ligeramente húmedo.</li>
+                <li>Haz movimientos circulares suaves.</li>
+                <li>Muy útil en retratos y naturaleza muerta.</li>
+            </ul>
+        </article>
+
+        <section class="consejo">
+            <h3>Consejo Retro</h3>
+            <p>
+                No existen los errores, solo accidents felices :D.
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Hecho de corazón-Técnicas de Pintura Básicas</p>
+    </footer>
+
+</body>
+</html>
